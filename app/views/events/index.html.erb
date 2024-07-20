@@ -1,0 +1,12 @@
+<h1>Community Events</h1>
+
+<ul>
+    <% @events.each do |event| %>
+        <li>
+            <%= event.title %>
+        </li>
+        <li>
+            <%= event.about %>
+        </li>
+    <% end %>
+</ul>

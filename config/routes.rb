@@ -6,8 +6,6 @@ Rails.application.routes.draw do
 
   # end
   #
-  resources :users
-
   resources :events
 
   devise_for :users, controllers: {

@@ -19,7 +19,7 @@ before_action :authenticate_user!, only: [:new, :create]
 
     @event = current_user.created_events.build(event_params)
     if @event.save
-      flash[:success] = "Object successfully created"
+      flash[:success] = "Event was successfully created"
       redirect_to @event
     else
       flash[:error] = "Something went wrong"

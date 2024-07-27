@@ -1,0 +1,16 @@
+<!-- app/views/attendee_events/new.html.erb -->
+
+<h1>Attend an Event</h1>
+
+<%= form_with(model: @attendee_event, url: attendee_events_path, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :event_id, "Select Event" %>
+    <%= form.collection_select :event_id, @events, :id, :name, prompt: "Choose an event" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Attend" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', events_path %>

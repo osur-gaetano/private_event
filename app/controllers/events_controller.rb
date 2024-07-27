@@ -16,7 +16,6 @@ before_action :authenticate_user!, only: [:new, :create]
 
 
   def create
-
     @event = current_user.created_events.build(event_params)
     if @event.save
       flash[:success] = "Event was successfully created"

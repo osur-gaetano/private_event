@@ -1,10 +1,10 @@
 <!-- app/views/events/show.html.erb -->
 
-<h1><%= @event.title %></h1>
+<h1><%= @event.name %></h1>
 <p><%= @event.about %></p>
 
 <% if @event.attendees.include?(current_user) %>
-  <%= button_to 'Revock Attendance', event_attendee_event_path(@event, @event.attendee_events.find_by(attendee: current_user)), method: :delete %>
+  <%= button_to 'Unattend', event_attendee_event_path(@event, @event.attendee_events.find_by(attendee_id: current_user.id)), method: :delete %>
 <% else %>
   <%= button_to 'Attend', event_attendee_events_path(@event), method: :post %>
 <% end %>
@@ -12,7 +12,7 @@
 <h2>Attendees</h2>
 <ul>
   <% @event.attendees.each do |attendee| %>
-    <li><%= attendee.email %></li>
+    <li><%= attendee.name %></li>
   <% end %>
 </ul>
 

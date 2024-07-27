@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   root "events#index"
 
-  # resources :users do
-  #   resources :events
+  resources :events do
+    resources :attendee_events
+  end
 
-  # end
-  #
-  resources :events
+  resources :attendee_events,only: [:new]
 
   devise_for :users, controllers: {
     sessions: 'users/sessions'

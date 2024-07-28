@@ -1,0 +1,9 @@
+<h2>Event Attendance</h2>
+<ul>
+  <% current_user.attended_events.each do |attended_event| %>
+    <li><%= attended_event.title %></li>
+    <li><%= attended_event.about%></li>
+    <li><%= attended_event.event_date%>
+
+  <% end %>
+</ul>

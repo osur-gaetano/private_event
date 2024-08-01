@@ -11,9 +11,24 @@
   </head>
 
   <body>
+
+    <ul?
+        
+        <li></li>
+        <%# <li><%= button_to 'Sign Out', event_attendee_event_path(@event, @event.attendee_events.find_by(attendee: current_user)), method: :delete </li> %>
+        <li><%= link_to 'Back to Events', events_path %></li>
+        <li><%= button_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+      
+        <li></li>
+        <li></li>
+        <li></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+      </ul>
+      
     
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= notice %>
+    <%= alert %>
     <%= yield %>
 
   </body>

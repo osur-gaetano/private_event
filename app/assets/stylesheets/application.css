@@ -13,32 +13,110 @@
  *= require_tree .
  *= require_self
  */
-*, *::before, *::after {
-    box-sizing: border-box;
-    padding: 0;
-}
-
-body{
+ *,
+ *::before,
+ *::after {
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+ }
+ 
+ :root {
+     --fw-light: 300;
+     --fw-normal: 400;
+     --fw-semi: 500;
+     --fw-bold: 700;
+     --fs-h1: 1.25rem;
+     --fs-h2: 1.75rem;
+     --fs-body: 1rem;
+     --fs-xl: 4rem;
+     --clr-light: #EEE;
+     --clr-gray: #686D76;
+     --clr-dark: #373A40;
+     --clr-accent: #DC5F00;
+     --clr-accent-dark: #6e513b;
+   }
+   
+body {
     margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    min-height: 100vh;
+}
+   
+h1, h2, h3 {
+   line-height: 1;
+}
+   
+a {
+   text-decoration: none;
+   color: var(--clr-accent);
+}
+   
+a:hover {
+   color: var(--clr-accent-dark);
 }
 
+.nav-bar{
+   border-bottom: 2px solid var(--clr-accent-dark);
+}
 
- ul {
-    list-style: none;
- }
+nav{
+   text-decoration: none;
+   list-style: none;
+   text-align: center;
+}
 
- .flex {
-    display: flex;
- }
+ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
 
- .flex_end {
-    justify-content: flex-end;
-    gap: 1.25rem
- }
+.form{
+   border: 2px solid var(--clr-accent-dark);
+   border-radius: 10px;
+   width:50%;
+   max-width: 350px;
+   margin: 70px auto;
+   padding-left: 2em;
+}
+.form h2{
+   text-align: center;
+}
 
- .container{
-    width: 80%;
-    max-width: 1100px;
-    margin: 0 auto;
+input[type="submit"]{
+   background-color: var(--clr-accent-dark);
+   color: var(--clr-light);
+   border: none;
+   border-radius: 4px;
+   padding: .35em 1.95em;
+}
+
+.field{
+   padding-top: .95em;
+}
+   
+ @media (min-width: 700px) {
+    
+    .flex {
+       display: flex;
+    }
+    
+    .flex_end {
+       justify-content: flex-end;
+       gap: 1.25em
+    }
+    
+    .container{
+       width: 80%;
+       margin: 0 auto;
+    }    
+
+    ul{
+      padding: 1.5rem;
+    }   
  }
+   
+

@@ -86,12 +86,14 @@ ul{
    text-align: center;
 }
 
-input[type="submit"]{
+input[type="submit"],
+button{
    background-color: var(--clr-accent-dark);
    color: var(--clr-light);
    border: none;
    border-radius: 4px;
    padding: .35em 1.95em;
+   font-weight: 700;
 }
 
 .field{

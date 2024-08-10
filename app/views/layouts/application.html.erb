@@ -15,12 +15,10 @@
     <nav>
       <div class="nav-bar container">
         <% if user_signed_in? %>
-          <ul class="flex">
+            
+          <ul class="flex flex_end">
             <li>
               <%= link_to "Events", events_path %>
-            </li>
-            <li>
-              <p>Hello, <%=current_user.username%> </p>
             </li>
             <li>
               <%= link_to "Create Event", new_event_path %>

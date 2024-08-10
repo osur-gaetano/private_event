@@ -2,7 +2,7 @@ class AttendeeEventsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :find_event
-  before_action :find_evemts, only: [:new]
+  before_action :find_events, only: [:new]
 
   def index
     @attended_events = AttendeeEvent.all
@@ -43,7 +43,7 @@ class AttendeeEventsController < ApplicationController
       @event = Event.find(params[:event_id])
     end
 
-    def find_evemts
+    def find_events
       @events = Event.all
     end
 
